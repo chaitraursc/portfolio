@@ -1,0 +1,22 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob("../../content/reflections/*.md", { eager: true });
+  return Object.entries(modules).map(([path, mod]: [string, any]) => {
+    const slug = path.split("/").pop()?.replace(".md", "");
+    return {
+      params: { slug },
+      props: { mod },
+    };
+  });
+}
+
+const { mod } = Astro.props;
+const { title, date, description } = mod.frontmatter;
+const Content = mod.default;
+---
+
+<BlogLayout title={title} date={date} description={description}>
+  <Content />
+</BlogLayout>

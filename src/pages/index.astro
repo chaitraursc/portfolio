@@ -1,17 +1,23 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home">
+  <section class="min-h-[60vh] flex flex-col justify-center max-w-2xl">
+    <p class="text-sm tracking-widest uppercase text-[#A0522D] mb-4">Hello, I'm</p>
+    <h1 class="text-5xl md:text-6xl font-serif text-[#2C1A0E] leading-tight mb-6">
+      Chaitra
+    </h1>
+    <p class="text-xl text-[#8B7355] leading-relaxed font-light max-w-xl">
+      Developer and project manager. I build things, lead teams, and occasionally write about what I learn along the way.
+    </p>
+    <div class="flex gap-6 mt-10">
+      <a href="/work" class="text-sm tracking-widest uppercase text-[#2C1A0E] border-b border-[#A0522D] pb-0.5 hover:text-[#A0522D] transition-colors">
+        See my work
+      </a>
+      <a href="/reflections" class="text-sm tracking-widest uppercase text-[#8B7355] hover:text-[#A0522D] transition-colors">
+        Read reflections
+      </a>
+    </div>
+  </section>
+</BaseLayout>

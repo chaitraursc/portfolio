@@ -1,0 +1,30 @@
+---
+const links = [
+  { href: "/", label: "home" },
+  { href: "/bio", label: "bio" },
+  { href: "/work", label: "work" },
+  { href: "/reflections", label: "reflections" },
+  { href: "/connect", label: "connect" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="w-full py-8 px-6 md:px-16">
+  <ul class="flex gap-8">
+    {links.map(({ href, label }) => (
+      <li>
+        <a
+          href={href}
+          class={`text-sm tracking-widest uppercase transition-colors duration-200
+            ${currentPath === href
+              ? "text-[#A0522D] border-b border-[#A0522D] pb-0.5"
+              : "text-[#8B7355] hover:text-[#2C1A0E]"
+            }`}
+        >
+          {label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
