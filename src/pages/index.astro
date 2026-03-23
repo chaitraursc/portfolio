@@ -12,10 +12,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       Developer and project manager. I build things, lead teams, and occasionally write about what I learn along the way.
     </p>
     <div class="flex gap-6 mt-10">
-      <a href="/work" class="text-sm tracking-widest uppercase text-[#2C1A0E] border-b border-[#A0522D] pb-0.5 hover:text-[#A0522D] transition-colors">
+      <a href={`${import.meta.env.BASE_URL}work`} class="text-sm tracking-widest uppercase text-[#2C1A0E] border-b border-[#A0522D] pb-0.5 hover:text-[#A0522D] transition-colors">
         See my work
       </a>
-      <a href="/reflections" class="text-sm tracking-widest uppercase text-[#8B7355] hover:text-[#A0522D] transition-colors">
+      <a href={`${import.meta.env.BASE_URL}reflections`} class="text-sm tracking-widest uppercase text-[#8B7355] hover:text-[#A0522D] transition-colors">
         Read reflections
       </a>
     </div>
