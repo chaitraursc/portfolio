@@ -9,5 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://chaitraursc.github.io",
-  base: "/portfolio", // omit this if deploying to root domain
+  base: "/portfolio/", // omit this if deploying to root domain
 });
